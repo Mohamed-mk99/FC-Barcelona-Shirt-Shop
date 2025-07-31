@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="user.css">
+</head>
+<body>
+    <main>
+        <div class="user-info">
+            <h1>User Profile</h1>
+            <p><strong>Full Name:</strong> <span id="full-name"></span>
+                <input type="text" id="full-name-input" style="display:none;">
+            </p>
+            <p><strong>Username:</strong> <span id="username"></span>
+                <input type="text" id="username-input" style="display:none;">
+            </p>
+            <p><strong>Email:</strong> <span id="email"></span>
+                <input type="email" id="email-input" style="display:none;">
+            </p>
+            <p><strong>Phone:</strong> <span id="phone"></span>
+                <input type="text" id="phone-input" style="display:none;">
+            </p>
+            <button id="edit-btn" style="margin-top:20px;">Edit</button>
+            <button id="save-btn" style="margin-top:20px; display:none;">Save</button>
+            <button id="logout-btn" style="margin-top:20px;">Log Out</button>
+            <button id="back-home-btn" style="margin-top:20px;"><a href="homepage.html">Back to Homepage</a></button>
+        </div>
+    </main>
+    <script>
+    // Load current logged-in user data from localStorage
+    document.addEventListener('DOMContentLoaded', () => {
+        let userData = null;
+        try {
+            userData = JSON.parse(localStorage.getItem('currentUser'));
+        } catch (e) {
+            userData = null;
+        }
+
+        function displayUser(data) {
+            document.getElementById('full-name').textContent = data.fullName || '';
+            document.getElementById('username').textContent = data.username || '';
+            document.getElementById('email').textContent = data.email || '';
+            document.getElementById('phone').textContent = data.phone || '';
+            // Set input values for editing
+            document.getElementById('full-name-input').value = data.fullName || '';
+            document.getElementById('username-input').value = data.username || '';
+            document.getElementById('email-input').value = data.email || '';
+            document.getElementById('phone-input').value = data.phone || '';
+        }
+
+        if (userData && typeof userData === 'object') {
+            displayUser(userData);
+        } else {
+            alert('No user data found. Please log in or register first.');
+            window.location.href = 'sign in.html';
+        }
+
+        // Edit button logic
+        document.getElementById('edit-btn').addEventListener('click', function() {
+            // Hide spans, show inputs
+            document.getElementById('full-name').style.display = 'none';
+            document.getElementById('username').style.display = 'none';
+            document.getElementById('email').style.display = 'none';
+            document.getElementById('phone').style.display = 'none';
+            document.getElementById('full-name-input').style.display = '';
+            document.getElementById('username-input').style.display = '';
+            document.getElementById('email-input').style.display = '';
+            document.getElementById('phone-input').style.display = '';
+            document.getElementById('edit-btn').style.display = 'none';
+            document.getElementById('save-btn').style.display = '';
+        });
+
+        // Save button logic
+        document.getElementById('save-btn').addEventListener('click', function() {
+            // Get new values
+            userData.fullName = document.getElementById('full-name-input').value.trim();
+            userData.username = document.getElementById('username-input').value.trim();
+            userData.email = document.getElementById('email-input').value.trim();
+            userData.phone = document.getElementById('phone-input').value.trim();
+            // Save to localStorage
+            localStorage.setItem('currentUser', JSON.stringify(userData));
+            localStorage.setItem('user', JSON.stringify(userData)); // Optional: update registered user too
+            // Update display
+            displayUser(userData);
+            // Hide inputs, show spans
+            document.getElementById('full-name').style.display = '';
+            document.getElementById('username').style.display = '';
+            document.getElementById('email').style.display = '';
+            document.getElementById('phone').style.display = '';
+            document.getElementById('full-name-input').style.display = 'none';
+            document.getElementById('username-input').style.display = 'none';
+            document.getElementById('email-input').style.display = 'none';
+            document.getElementById('phone-input').style.display = 'none';
+            document.getElementById('edit-btn').style.display = '';
+            document.getElementById('save-btn').style.display = 'none';
+            alert('Profile updated!');
+        });
+
+        // Logout button logic
+        document.getElementById('logout-btn').addEventListener('click', function() {
+            localStorage.removeItem('currentUser');
+            window.location.href = 'sign in.html';
+        });
+    });
+    </script>
+</body>
+</html>

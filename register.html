@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTER</title>
+    <link rel="stylesheet" href="register.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="images/tttt.png" type="image/x-icon">
+
+</head>
+<body>
+    <header>
+        <div class="navbar1">
+           <div class="dlogo">
+            <div class="text"><h1 class="firstword"><a href="homepage.html">BARCA JERSEYS STORE</a></h1></div>
+           </div>
+           
+            <ul class="nav">
+                <li><a href="homepage.html" >Home</a></li>
+                <li><a href="aboutus.html" >about us</a></li>
+                <li><a href="historypage.html" >Club History</a></li>
+                <li><a href="contactus.html" >contact us</a></li>
+                <li><a href="sign in.html" >sign in</a></li>
+                <li><a href="register.html" class="active">Register</a></li>
+                <li><a href="user.html">User</a></li> <!-- Added User link -->
+
+            </ul>
+
+        </div>
+    </header>
+
+
+
+
+  <section class="section">
+    <div class="register">
+     <form action="">
+        <h1>Registration</h1>
+        <div class="input-box">
+            <div class="input-field">
+             <input type="text" placeholder="name" required autofocus>
+             <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-field">
+             <input type="text" placeholder="surname" required autofocus>
+             <i class='bx bxs-user'></i>
+            </div>
+        </div>
+        <div class="input-box">
+            <div class="input-field">
+             <input type="Email" placeholder="Email" required multiple autofocus>
+             <i class='bx bxs-envelope'></i>
+            </div>
+         
+        <div class="input-field">
+             <input type="tel" placeholder="Phone Number" required autofocus>
+             <i class='bx bxs-phone'></i>
+
+            </div>
+        </div>
+        <div class="input-box">
+            <div class="input-field">
+             <input type="password" placeholder="Password" required autofocus>
+             <i class='bx bxs-lock-alt'></i>
+            </div>
+         
+            <div class="input-field">
+             <input type="password" placeholder="Confirm password" required autofocus>
+             <i class='bx bxs-lock-alt'></i>
+            </div>
+        </div>
+        <label  for="check"><input type="checkbox">I hereby declare that the above information provided  is true and correct
+        </label><br>
+        <button type="submit" class="btn">Register</button>
+   </section> 
+    
+    
+    
+     </form>
+    </div>  
+    
+
+
+    <!--footer-->             
+    <div class="footer">
+        <div class="container-foot">
+            <div class="rowfoot">
+                <div class="footer-col-1">
+                    <h3 class="h3foot">Download Our app</h3>
+                    <p>Download app for android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="images/playstore1.png" alt="">
+                        <img src="images/appstore1.jpg" alt="">
+                    </div> 
+                </div>
+                <div class="footer-col-2">
+                 <h1 class="firstword"><a href="homepage.html">BARCA JERSEYS STORE</a></h1>
+                 <p class="pfoot">Barca jerseys store is an online store where you can find all barca jerseys in 2023-24 with some historical shirts.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3 class="h3-support">Support</h3>
+                    <ul class="links">
+                        <li class="socialmedias">privacy policy</li><br>
+                        <li class="socialmedias">FAQ</li><br>
+                        <li class="socialmedias">Help</li><br>
+                        <li class="socialmedias">Contact</li>
+
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3 class="h3-support">Follow us</h3>
+                    <ul class="footicons">
+                        <li><i class='bx bxl-facebook-square'></i></li><br>
+                        <li><i class='bx bxl-instagram' ></i></li><br>
+                        <li><i class='bx bxl-linkedin' ></i></li><br>
+                        <li><i class='bx bxl-twitter' ></i></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div></div>
+            <hr>
+             <p class="copyright">Copyright 2024-BARCA JERSEYS STORE</p>
+        </div>
+
+    </div>
+    <script>
+    document.querySelector('.register form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Collect user info from the form
+        const inputs = this.querySelectorAll('input');
+        const userData = {
+            fullName: inputs[0].value.trim() + ' ' + inputs[1].value.trim(), // name + surname
+            username: inputs[0].value.trim(), // or create a username field if you want
+            email: inputs[2].value.trim(),
+            phone: inputs[3].value.trim(),
+            password: inputs[4].value, // store password for login check
+        };
+
+        // Save to localStorage
+        localStorage.setItem('user', JSON.stringify(userData));
+        localStorage.setItem('currentUser', JSON.stringify(userData));
+
+        // Redirect to user profile page
+        window.location.href = 'user.html';
+    });
+    </script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

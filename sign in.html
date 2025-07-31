@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN IN </title>
+    <link rel="stylesheet" href="signin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="images/tttt.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="navbar1">
+           <div class="dlogo">
+            <div class="text"><h1 class="firstword"><a href="homepage.html">BARCA JERSEYS STORE</a></h1></div>
+           </div>
+           
+            <ul class="nav">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="aboutus.html" >about us</a></li>
+                <li><a href="historypage.html" >Club History</a></li>
+                <li><a href="contactus.html">contact us</a></li>
+                <li><a href="sign in.html" class="active">sign in</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="user.html" class="active">User</a></li>
+
+            </ul>
+        </div>
+    </header>
+
+
+
+
+  
+ <div class="login-generale">
+    <div class="login">
+     <form action="">
+        <h1 style="font-family: 'Courier New';"" style="color: dodgerblue;">Login</h1>
+        <div class="describe">
+          <label for="describe">If you have an account, sign in with your email address.</label>
+        </div><br>
+        <label for="em" >Email Adress*</label><br>
+        <div class="input-box">
+         <input type="email" class="em"  name="em" id="em" placeholder="Email adress">
+         <i class='bx bx-envelope' ></i>
+         
+        </div>
+         <label for="Pass" class="pass">Password*</label><br>
+        <div class="input-box">
+         <input type="password" name="pass" id="pass" required placeholder="Password">
+         <i class='bx bxs-lock-alt' ></i>
+        </div>
+        <div class="remember-forgot">
+            <label for=""><input type="checkbox" name="chb" id="chb">Remember me
+            </label>
+            <a href="#">Forgot Password</a>
+        </div>
+         <button type="submit" class="btn">Login</button>
+        <div class="register-link">
+            <p>don't have an account?<a 
+            href="register.html">Register</a></p>
+        </div>
+
+    
+     </form>
+    </div>
+
+  </div>
+
+    <!--footer-->             
+    <div class="footer">
+        <div class="container-foot">
+            <div class="rowfoot">
+                <div class="footer-col-1">
+                    <h3 class="h3foot">Download Our app</h3>
+                    <p>Download app for android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="images/playstore1.png" alt="">
+                        <img src="images/appstore1.jpg" alt="">
+                    </div> 
+                </div>
+                <div class="footer-col-2">
+                 <h1 class="firstword"><a href="homepage.html">BARCA JERSEYS STORE</a></h1>
+                 <p class="pfoot">Barca jerseys store is an online store where you can find all barca jerseys in 2023-24 with some historical shirts.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3 class="h3-support">Support</h3>
+                    <ul class="links">
+                        <li class="socialmedias">privacy policy</li><br>
+                        <li class="socialmedias">FAQ</li><br>
+                        <li class="socialmedias">Help</li><br>
+                        <li class="socialmedias">Contact</li>
+
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3 class="h3-support">Follow us</h3>
+                    <ul class="footicons">
+                        <li><i class='bx bxl-facebook-square'></i></li><br>
+                        <li><i class='bx bxl-instagram' ></i></li><br>
+                        <li><i class='bx bxl-linkedin' ></i></li><br>
+                        <li><i class='bx bxl-twitter' ></i></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div></div>
+            <hr>
+             <p class="copyright">Copyright 2024-BARCA JERSEYS STORE</p>
+        </div>
+
+    </div>
+    <script>
+    document.querySelector('.login form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Get entered email and password
+        const email = document.getElementById('em').value.trim();
+        const password = document.getElementById('pass').value;
+
+        // Get registered user(s) from localStorage
+        let userData = JSON.parse(localStorage.getItem('user'));
+
+        // If you only allow one user (from register.html)
+        if (userData && userData.email === email && userData.password === password) {
+            // Save as current user and redirect
+            localStorage.setItem('currentUser', JSON.stringify(userData));
+            window.location.href = 'user.html';
+        } else {
+            alert('Invalid email or password!');
+        }
+    });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

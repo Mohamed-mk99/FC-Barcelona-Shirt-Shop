@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Oswald', sans-serif;
+}
+
+.banner1{
+       width: 100%;
+       height: 100vh;
+       background-image:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.75)),url(929658.jpg) ;
+       background-size: cover;
+       
+}
+
+header{
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 2;
+    position: absolute;
+}
+.banner1:hover{
+    width: 100%;
+    height: 100vh;
+    background-image:url(929658.jpg);
+    background-size: cover;
+
+}
+.navbar1{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10px;
+    
+}
+
+header .firstword a{
+    text-decoration: none;
+    background: linear-gradient(160deg,blue 10%,red 67%);
+    -webkit-text-fill-color: transparent;
+    background-clip:text;
+    letter-spacing: 2px;
+    font-size: 32px;
+    font-family:'Times New Roman', Times, serif;
+    margin-left: -170px;
+    margin-top: 150px;
+}
+.navbar1 ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    font-weight:700 ;
+    
+}
+.navbar1 ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+} 
+.navbar1 ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position:absolute;
+    left: 0;
+    bottom:-10px;
+    transition: 0.5s;
+
+}
+.navbar1 ul li:hover::after{
+    width:100%;
+}
+
+
+.content{
+    width:100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-90%);
+    text-align: center;
+    color:#fff ;
+}
+.content  h2{
+    font-size: 72px;
+    margin-top: 120%;
+    text-transform: uppercase;
+    color: beige;    
+}
+.content h1{
+    font-size: 100px;
+    color:#4874e4;
+    text-transform: uppercase;
+}
+.content p{
+    margin: 20px auto;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+button:hover span{
+   
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
+button .but{
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+   
+}
+span{
+    background: #009688;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+.barca-text{
+    background-color:rgb(23, 18, 75);
+}
+.barca-text h1{
+    width: 100%;
+    font-size: 188px;
+    color: #4874e4;
+}
+.barca-text h1:hover{
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+
+/*section*/
+
+
+.categories{
+ margin: 0px 0;
+ background-color: beige;
+ 
+}
+ 
+.row{
+    display: flex;
+}
+.col-3{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+    margin-left: 25px;
+    transition: 0.5s;
+    
+    
+}
+.col-3 img{
+    width: 100%;
+    height: 500px;
+    cursor: pointer;
+    
+} 
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.title{
+    text-transform: uppercase;
+    font-size: 26px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 2px 2px 25px;
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
+.title::after{
+   content: '';
+   background: #200c09;
+   width: 80px;
+   height: 5px;
+   border-radius: 5px;
+   position:absolute ;
+   bottom: 0;
+   left:50%;
+   transform: translateX(-50%);
+} 
+h4{
+    color: #555;
+    font-weight: normal;
+}
+.col-3 p{
+    font-size: 19px;
+    font-weight: 900;
+    color: #111;
+
+}
+.col-3 h3{
+    text-transform: uppercase;
+}
+.rating .fa{
+    color:orange;
+}
+.col-3:hover{
+    transform: translateY(-15px);
+}
+/*footer*/
+.footer .container-foot .rowfoot{
+    display: flex;
+}
+
+.footer{
+    background-color: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding:60px 0 20px ;
+    
+}
+.footer .pfoot{
+    color: #8a8a8a;
+}
+.footer .h3-support{
+    color: #fff;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.footer-col-1 , .footer-col-2, .footer-col-3, .footer-col-4{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+.footer-col-1{
+    flex-basis:30% ;
+    margin-left: 20px;
+}
+.footer-col-2{
+    flex: 1;
+    text-align: center;
+}
+.footer-col-2 img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+.footer-col-3, .footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+}
+.footicons, .links{
+   list-style-type: none; 
+   cursor: pointer;
+}
+.socialmedias:hover{
+   cursor: pointer;
+   color: #fff;
+   text-decoration: underline;
+}
+.footer .footer-col-4 .footicons i:hover{
+   cursor: pointer;
+   color:#4874e4;
+}
+
+.app-logo{
+    margin-top: 20px;
+}
+.app-logo img{
+    margin-top: 2px;
+    width: 140px;
+    height: 60px;
+    cursor: pointer;
+}
+.footer hr{
+    border: none;
+    background-color:#b5b5b5 ;
+    height: 1px;
+    margin: 20px 0;
+}
+.copyright{
+    text-align: center;
+}
+
+.footer-col-2 .firstword a{
+    text-decoration: none;
+    background: linear-gradient(160deg,blue 10%,red 67%);
+    -webkit-text-fill-color: transparent;
+    background-clip:text;
+    border-radius: 15px;
+    letter-spacing: 2px;
+    font-size: 32px;
+    font-family:'Times New Roman', Times, serif;
+    
+}
+.footer-col-4 ul li{
+    margin-bottom: -10px;
+}
+.footer-col-4 ul i{
+    font-size: 26px;
+    color: #fff;
+}
+
+
+/*animation*/
+.animate{
+    overflow-x: hidden;
+    height: 100%;
+    margin-bottom: 0px;
+    
+}
+.animate h1{
+    font-size: 128px;
+    margin-bottom: 50px;
+    background: linear-gradient(160deg,blue 10%,red 67%);
+    -webkit-text-fill-color: transparent;
+    background-clip:text;
+    animation-name: barca;
+    animation-duration: 6s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function:linear;
+    animation-fill-mode:forwards;
+    animation-play-state: running;
+}
+.animate h1:hover{
+    cursor: pointer;
+   
+
+}
+@keyframes barca{
+    from{
+        
+        translate: 0 0;
+        
+    }
+    25%{
+        translate: 200px 0;
+
+    }
+    50%{
+        translate: 400px 0;
+    }
+    75%{
+        translate: 600px 0px;
+    }
+    to{
+        translate: 1200px 0;
+       
+    }
+}
+/* Styles for smaller screens */
+
+.nav a.active {
+    color: aqua; /* Highlight color */
+    font-weight: bold;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar1 {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 28px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .nav li a {
+        font-size: 18px;
+    }
+
+    .content h2 {
+        font-size: 36px;
+    }
+
+    .content h1 {
+        font-size: 48px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .col-3 img {
+        height: auto;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .footer .rowfoot {
+        flex-direction: column;
+    }
+
+    .footer-col-1,
+    .footer-col-2,
+    .footer-col-3,
+    .footer-col-4 {
+        margin-bottom: 20px;
+    }
+}
+

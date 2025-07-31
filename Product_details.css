@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,400&display=swap');
+
+body{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+
+/*product details*/
+
+
+
+
+
+.details .collection{
+    font-size: 18px;
+    font-family: 'Oswald',sans-serif;
+}
+
+.container-generale{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 340vh;
+    position: relative;
+}
+.container-generale .ctn-imgs .ctn-image .image3{
+    margin-left: 5px;
+    width: 550px;
+    height: 800px;
+}
+.container-generale .ctn-imgs{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;  
+    margin-bottom: 90px;
+
+}
+      
+.container-generale .details{
+    position: sticky;
+    top: 0px;
+    height: 700px;
+    width: 385px;
+    margin-right: 30px; 
+}
+.container-generale .details .nb{
+    flex-grow: 1;
+}
+.container-generale .details .custome{
+    display: flex;
+    justify-content:flex-start;
+}
+.container-generale .details .custome .lplus{
+    margin-left: 170px;
+}
+.container-generale .details .custome  .ttlprice{
+    margin-left: 250px;
+    font-size: 19px;
+}
+
+.container-generale  .details .select{
+    width: 300px;
+    height: 50px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.container-generale .details .player{
+    height: 60px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background: linear-gradient(150deg,blue 27%,red 63%);
+    font: normal small-caps bold 22px 'Open Sans';
+    margin-top: -45px;
+    width: 250px;
+    cursor: pointer;
+
+} 
+.container-generale .details button{
+    background-color:rgb(243, 190, 91);
+    font-size: 19px;
+    height: 60px;
+    width: 350px;
+    border-radius: 9px;
+    margin-top: 0px;
+    
+}
+.container-generale  .details button:hover{
+    background-color:rgb(3, 3, 84);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+    transform: scale(1);
+
+}
+.container-generale  .details .rating i{
+    color: orange;
+    font-size: 18px;
+}
+.container-generale  .details button i{
+    margin-right: 9px;
+    font-size: 24px;
+}
+
+
+
+.description {
+    margin-left: 35px; 
+    margin-top: 10px;
+}
+.description p{
+    width: 1100px;
+    
+}
+.description h2{
+    font-size: 32px;
+}
+.description h6{
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*footer*/
+.footer .container-foot .rowfoot{
+    display: flex;
+}
+
+.footer{
+    background-color: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding:60px 0 20px ;
+    
+}
+.footer .pfoot{
+    color: #8a8a8a;
+}
+.footer .h3-support{
+    color: #fff;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.footer-col-1 , .footer-col-2, .footer-col-3, .footer-col-4{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+.footer-col-1{
+    flex-basis:30% ;
+    margin-left: 20px;
+}
+.footer-col-2{
+    flex: 1;
+    text-align: center;
+}
+.footer-col-2 img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+.footer-col-3, .footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+}
+.footicons, .links{
+   list-style-type: none; 
+   cursor: pointer;
+}
+.socialmedias:hover{
+   cursor: pointer;
+   color: #fff;
+   text-decoration: underline;
+}
+.footer .footer-col-4 .footicons i:hover{
+   cursor: pointer;
+   color:#4874e4;
+}
+
+.app-logo{
+    margin-top: 20px;
+}
+.app-logo img{
+    margin-top: 2px;
+    width: 140px;
+    height: 60px;
+    cursor: pointer;
+    border-top: 2px solid black;
+}
+.footer hr{
+    border: none;
+    background-color:#b5b5b5 ;
+    height: 1px;
+    margin: 20px 0;
+}
+.copyright{
+    text-align: center;
+}
+.footer-col-1 .h3foot{
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.footer-col-2 .firstword a{
+    text-decoration: none;
+    background: linear-gradient(160deg,blue 10%,red 67%);
+    -webkit-text-fill-color: transparent;
+    background-clip:text;
+    border-radius: 15px;
+    letter-spacing: 2px;
+    font-size: 32px;
+    font-family:'Times New Roman', Times, serif;
+    
+}
+.footer-col-2 .firstword{
+    margin-bottom: -2%;
+}
+.h3-support{
+    margin-right: -35px;
+}
+.footer-col-3 .links li{
+    margin-bottom: 10px;
+}
+.footer-col-4 ul i{
+    font-size: 26px;
+    color: #fff;
+}
+
+
+
+
+
+
+.nav a.active {
+    color: aqua; /* Highlight color */
+    font-weight: bold;
+}
+
+
+
+/*header*/
+header{
+ width: 100%;
+ background-color: rgba(0,0,0,0.6);
+ z-index: 2;
+ height: 120px;
+ margin-bottom: 10px;
+}
+.navbar1{
+ width: 85%;
+ margin: auto;
+ padding: 35px 0;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ margin-right: 10px;
+ 
+}
+
+.text .firstword a{
+ text-decoration: none;
+ background: linear-gradient(160deg,blue 10%,red 67%);
+ -webkit-text-fill-color: transparent;
+ background-clip:text;
+ letter-spacing: 2px;
+ font-size: 32px;
+ font-family:'Times New Roman', Times, serif;
+ margin-left: -170px;
+ margin-top: 150px;
+}
+.navbar1 .logo{
+ width: 100px;
+ height: 100px;
+ cursor: pointer;
+ position: relative;
+ margin-left: -190px;
+ 
+}
+.navbar1 ul li{
+ list-style: none;
+ display: inline-block;
+ margin: 0 20px;
+ position: relative;
+ font-weight:700 ;
+ 
+}
+
+.navbar1 ul li a{
+ text-decoration: none;
+ color: #fff;
+ text-transform: uppercase;
+} 
+.navbar1 ul li::after{
+ content: '';
+ height: 3px;
+ width: 0;
+ background: #009688;
+ position:absolute;
+ left: 0;
+ bottom:-10px;
+ transition: 0.5s;
+
+}
+.navbar1 ul li:hover::after{
+ width:100%;
+}
+
